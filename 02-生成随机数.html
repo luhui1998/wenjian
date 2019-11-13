@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/* 生成 [n,m] 之间的随机整数 */
+/* 0~9 之间的随机整数 */
+// var r = Math.random(); // [0,1)
+// r *= 10; // [0,10)
+// // 取整 - 向下取整
+// r = Math.floor(r);
+// // console.log(r);、、
+
+// /* 获得1到10之间的整数 */
+// var r = Math.random(); // [0,1)
+// r *= 10; // [0,10)
+// // 取整 - 向上取整
+// r = Math.ceil(r);
+// // console.log(r);
+
+// /* 获取 [0,10] 之间的整数*/
+// /* 获得1到10之间的整数 */
+// var r = Math.random(); // [0,1)
+// r *= 10; // [0,10)
+// // 取整 - 四舍五入
+// r = Math.round(r);
+// console.log(r);
+
+
+/* js中的取整的函数 */
+// Math.floor(); // 向下取整
+
+// console.log(Math.floor(1.9999999));
+
+// // Math.ceil();  // 向上
+// console.log(Math.ceil(1.000000001));
+// console.log(Math.ceil(1.900000001));
+
+// // Math.round(); // 四舍五入
+// console.log(Math.round(1.499999));
+// console.log(Math.round(1.5000001));
+
+
+/* 概率更加平均的随机整数 */
+/*
+  获取0~9之间的整数
+*/
+// var r = Math.floor(Math.random() * 10);
+// console.log(r);
+/* 获取1~10之间的整数 */
+/* 让0~9 加1 就是 1~10 */
+// var r = Math.floor(Math.random() * 10 + 1);
+// console.log(r);
+
+/* 获取10~20之间的随机整数 */
+// var r = Math.random() * (10 + 1); // [0,11)
+// r += 10; // [10,21)
+// r = Math.floor(r); // [10,20]
+// console.log(r);
+
+// // 指定区间的随机整数的公式：
+// 随机整数 = Math.floor(Math.random() * (最大值 - 最小值 + 1) + 最小值)
+
+/* 求10~100之间的随机整数 */
+// var r = Math.floor(Math.random() * (100 - 10 + 1) + 10);
+// console.log(r);
+
+/* 把随机整数写成一个函数 */
+function randomInt(n,m){
+  return Math.floor(Math.random() * (m-n+1) + n);
+}
+</script>
+</html>
